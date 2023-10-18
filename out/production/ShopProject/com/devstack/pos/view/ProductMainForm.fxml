@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="context" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.devstack.pos.controller.ProductMainFormController">
+   <children>
+      <Label layoutX="15.0" layoutY="15.0" text="Product Management">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="52.0" prefHeight="12.0" prefWidth="773.0" />
+      <JFXButton buttonType="RAISED" layoutX="695.0" layoutY="10.0" onAction="#btnBackToHomeOnAction" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #05BFDB;" text="Back to Home">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="13.0" layoutY="67.0" prefHeight="422.0" prefWidth="348.0" style="-fx-background-color: #DFDFDC;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="243.0" layoutY="8.0" onAction="#btnNewProductOnAction" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #71DA6B;" text="New Product">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtProductId1" editable="false" layoutX="15.0" layoutY="9.0" prefHeight="30.0" prefWidth="142.0" promptText="Product ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <TextArea fx:id="txtDescription1" layoutX="13.0" layoutY="58.0" prefHeight="63.0" prefWidth="322.0" promptText="Description">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <JFXButton buttonType="RAISED" layoutX="243.0" layoutY="135.0" onAction="#btnSaveProductOnAction" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #05BFDB;" text="Save Product">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TextField fx:id="txtSearchProduct" layoutX="13.0" layoutY="186.0" prefHeight="30.0" prefWidth="322.0" promptText="Search Product">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TableView fx:id="tblProduct" layoutX="13.0" layoutY="229.0" prefHeight="181.0" prefWidth="322.0">
+              <columns>
+                <TableColumn prefWidth="52.0" text="#" />
+                <TableColumn prefWidth="127.0" text="Description" />
+                  <TableColumn prefWidth="71.0" text="Extend" />
+                  <TableColumn prefWidth="71.0" text="Options" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="365.0" layoutY="67.0" orientation="VERTICAL" prefHeight="422.0" prefWidth="8.0" />
+      <TextField fx:id="txtProductId2" layoutX="381.0" layoutY="67.0" prefHeight="30.0" prefWidth="164.0" promptText="Product ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="txtDescription2" layoutX="381.0" layoutY="107.0" prefHeight="63.0" prefWidth="409.0" promptText="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <TableView fx:id="tblProductDetails" layoutX="381.0" layoutY="190.0" prefHeight="298.0" prefWidth="409.0">
+        <columns>
+          <TableColumn prefWidth="54.0" text="#" />
+          <TableColumn prefWidth="60.0" text="Qty." />
+            <TableColumn prefWidth="60.0" text="Selling" />
+            <TableColumn prefWidth="60.0" text="Buying" />
+            <TableColumn prefWidth="60.0" text="Discount" />
+            <TableColumn prefWidth="56.0" text="Show" />
+            <TableColumn prefWidth="58.0" text="Options" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
